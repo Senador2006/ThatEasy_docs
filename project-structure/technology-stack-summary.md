@@ -278,3 +278,4 @@ User Query → Context Analysis → OpenAI API → Response Enhancement → User
 - [ ] Monitoring setup (DataDog/New Relic)
 
 Esta documentação serve como guia técnico completo para o desenvolvimento e deploy do projeto ThatEasy, garantindo consistência e eficiência em todo o processo de desenvolvimento. 
+
