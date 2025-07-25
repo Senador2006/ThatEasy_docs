@@ -33,12 +33,23 @@ Esta pasta contém toda a documentação sobre como organizamos e estruturamos o
 - 🚀 Tutorial do primeiro feature
 - ✅ Checklist do primeiro dia
 
+### 📚 [technical-glossary.md](./technical-glossary.md)
+**Glossário técnico completo** com explicações didáticas:
+- 🏗️ Arquitetura e estrutura (Monorepo, API, Microservices)
+- 💻 Frontend e interface (React, TypeScript, Components)
+- 🔧 Backend e servidor (Node.js, Fastify, WebSocket)
+- 📊 Banco de dados (PostgreSQL, Redis, Cache)
+- 🤖 Inteligência artificial (LLM, Vector DB, Embeddings)
+- 🛠️ DevOps e infraestrutura (CI/CD, Docker, Kubernetes)
+- 🔐 Segurança (JWT, HTTPS, Rate Limiting)
+
 ## 🎯 Como Usar Esta Documentação
 
 ### Para Novos Desenvolvedores
-1. **Comece com**: `quick-start-guide.md` - Setup rápido
-2. **Continue com**: `project-organization.md` - Entenda a estrutura
-3. **Aprofunde-se**: `technology-stack-summary.md` - Detalhes técnicos
+1. **Comece com**: `technical-glossary.md` - Entenda os termos básicos
+2. **Setup rápido**: `quick-start-guide.md` - Ambiente funcionando
+3. **Entenda estrutura**: `project-organization.md` - Arquitetura geral
+4. **Aprofunde-se**: `technology-stack-summary.md` - Detalhes técnicos
 
 ### Para Tech Leads
 1. **Revise**: `project-organization.md` - Arquitetura geral
@@ -46,9 +57,10 @@ Esta pasta contém toda a documentação sobre como organizamos e estruturamos o
 3. **Implemente**: `quick-start-guide.md` - Onboarding da equipe
 
 ### Para Product Managers
-1. **Visão geral**: `technology-stack-summary.md` - Capacidades técnicas
-2. **Timeline**: `project-organization.md` - Fases de desenvolvimento
-3. **Setup**: `quick-start-guide.md` - Ambiente de demonstração
+1. **Entenda termos**: `technical-glossary.md` - Vocabulário técnico essencial
+2. **Visão geral**: `technology-stack-summary.md` - Capacidades técnicas
+3. **Timeline**: `project-organization.md` - Fases de desenvolvimento
+4. **Demo ambiente**: `quick-start-guide.md` - Ambiente de demonstração
 
 ## 🔧 Tecnologias Principais
 
