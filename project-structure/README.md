@@ -43,13 +43,15 @@ Esta pasta contém toda a documentação sobre como organizamos e estruturamos o
 - 🛠️ DevOps e infraestrutura (CI/CD, Docker, Kubernetes)
 - 🔐 Segurança (JWT, HTTPS, Rate Limiting)
 
+
 ## 🎯 Como Usar Esta Documentação
 
 ### Para Novos Desenvolvedores
 1. **Comece com**: `technical-glossary.md` - Entenda os termos básicos
-2. **Setup rápido**: `quick-start-guide.md` - Ambiente funcionando
-3. **Entenda estrutura**: `project-organization.md` - Arquitetura geral
-4. **Aprofunde-se**: `technology-stack-summary.md` - Detalhes técnicos
+2. **Veja o visual**: `layout-prototype.html` - Abra no navegador para ver o design
+3. **Setup rápido**: `quick-start-guide.md` - Ambiente funcionando
+4. **Entenda estrutura**: `project-organization.md` - Arquitetura geral
+5. **Aprofunde-se**: `technology-stack-summary.md` - Detalhes técnicos
 
 ### Para Tech Leads
 1. **Revise**: `project-organization.md` - Arquitetura geral
@@ -57,10 +59,11 @@ Esta pasta contém toda a documentação sobre como organizamos e estruturamos o
 3. **Implemente**: `quick-start-guide.md` - Onboarding da equipe
 
 ### Para Product Managers
-1. **Entenda termos**: `technical-glossary.md` - Vocabulário técnico essencial
-2. **Visão geral**: `technology-stack-summary.md` - Capacidades técnicas
-3. **Timeline**: `project-organization.md` - Fases de desenvolvimento
-4. **Demo ambiente**: `quick-start-guide.md` - Ambiente de demonstração
+1. **Veja o produto**: `layout-prototype.html` - Protótipo visual navegável
+2. **Entenda termos**: `technical-glossary.md` - Vocabulário técnico essencial
+3. **Visão geral**: `technology-stack-summary.md` - Capacidades técnicas
+4. **Timeline**: `project-organization.md` - Fases de desenvolvimento
+5. **Demo ambiente**: `quick-start-guide.md` - Ambiente de demonstração
 
 ## 🔧 Tecnologias Principais
 
