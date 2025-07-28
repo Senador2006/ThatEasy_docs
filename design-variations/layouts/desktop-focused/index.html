@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThatEasy - Desktop Focused</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="logo">
+                    🎓 ThatEasy
+                    <span class="logo-subtitle">Plataforma Educacional</span>
+                </div>
+            </div>
+            
+            <div class="search-section">
+                <div class="search-bar">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" class="search-input" placeholder="Buscar conteúdo, pessoas, grupos... (Ctrl+K)">
+                    <div class="search-filters">
+                        <button class="filter-btn active">Tudo</button>
+                        <button class="filter-btn">Posts</button>
+                        <button class="filter-btn">Pessoas</button>
+                        <button class="filter-btn">Grupos</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="header-actions">
+                <button class="header-btn" title="Notificações (Ctrl+N)">
+                    🔔
+                    <span class="notification-badge">3</span>
+                </button>
+                <button class="header-btn" title="Mensagens (Ctrl+M)">
+                    💬
+                    <span class="notification-badge">2</span>
+                </button>
+                <button class="header-btn" title="Configurações">⚙️</button>
+                <div class="profile-dropdown">
+                    <button class="profile-btn">
+                        <div class="profile-avatar">U</div>
+                        <span class="profile-name">Usuário</span>
+                        <span class="dropdown-arrow">▼</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="main-layout">
+        <!-- Left Sidebar -->
+        <aside class="sidebar-left">
+            <nav class="main-nav">
+                <div class="nav-section">
+                    <div class="nav-item active">
+                        <span class="nav-icon">🏠</span>
+                        <span class="nav-text">Feed Principal</span>
+                        <span class="nav-shortcut">Ctrl+1</span>
+                    </div>
+                    <div class="nav-item">
+                        <span class="nav-icon">🔍</span>
+                        <span class="nav-text">Explorar</span>
+                        <span class="nav-shortcut">Ctrl+2</span>
+                    </div>
+                    <div class="nav-item">
+                        <span class="nav-icon">🤖</span>
+                        <span class="nav-text">IA Assistant</span>
+                        <span class="nav-shortcut">Ctrl+3</span>
+                    </div>
+                </div>
+
+                <div class="nav-section">
+                    <h3 class="nav-section-title">Estudos</h3>
+                    <div class="nav-item">
+                        <span class="nav-icon">📚</span>
+                        <span class="nav-text">Meus Cursos</span>
+                        <span class="nav-count">5</span>
+                    </div>
+                    <div class="nav-item">
+                        <span class="nav-icon">📝</span>
+                        <span class="nav-text">Anotações</span>
+                        <span class="nav-count">23</span>
+                    </div>
+                    <div class="nav-item">
+                        <span class="nav-icon">🎯</span>
+                        <span class="nav-text">Metas</span>
+                        <span class="nav-count">7</span>
+                    </div>
+                    <div class="nav-item">
+                        <span class="nav-icon">📊</span>
+                        <span class="nav-text">Progresso</span>
+                    </div>
+                </div>
+
+                <div class="nav-section">
+                    <h3 class="nav-section-title">Social</h3>
+                    <div class="nav-item">
+                        <span class="nav-icon">👥</span>
+                        <span class="nav-text">Grupos de Estudo</span>
+                        <span class="nav-count">12</span>
+                    </div>
+                    <div class="nav-item">
+                        <span class="nav-icon">🎓</span>
+                        <span class="nav-text">Mentoria</span>
+                        <span class="nav-count">2</span>
+                    </div>
+                    <div class="nav-item">
+                        <span class="nav-icon">⭐</span>
+                        <span class="nav-text">Favoritos</span>
+                        <span class="nav-count">34</span>
+                    </div>
+                </div>
+
+                <div class="nav-section">
+                    <h3 class="nav-section-title">Pessoal</h3>
+                    <div class="nav-item">
+                        <span class="nav-icon">👤</span>
+                        <span class="nav-text">Meu Perfil</span>
+                    </div>
+                    <div class="nav-item">
+                        <span class="nav-icon">📈</span>
+                        <span class="nav-text">Estatísticas</span>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Study Progress Widget -->
+            <div class="sidebar-widget">
+                <h4>📈 Progresso Semanal</h4>
+                <div class="progress-chart">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 75%"></div>
+                    </div>
+                    <div class="progress-stats">
+                        <span>75% concluído</span>
+                        <span>15/20 metas</span>
+                    </div>
+                </div>
+                <div class="quick-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">47</span>
+                        <span class="stat-label">hrs estudadas</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">12</span>
+                        <span class="stat-label">posts criados</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Assistant Widget -->
+            <div class="sidebar-widget ai-widget">
+                <div class="ai-header">
+                    <span class="ai-icon">🤖</span>
+                    <span class="ai-status">
+                        <span class="status-dot online"></span>
+                        IA Online
+                    </span>
+                </div>
+                <p>Precisa de ajuda com algum tópico de estudo?</p>
+                <button class="ai-chat-btn">Iniciar Conversa</button>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Create Post Section -->
+            <div class="create-post-section">
+                <div class="create-post-card">
+                    <div class="create-header">
+                        <div class="user-avatar">U</div>
+                        <div class="create-content">
+                            <textarea class="create-input" placeholder="Compartilhe algo interessante que você aprendeu hoje... (Ctrl+Enter para publicar)"></textarea>
+                            
+                            <div class="create-toolbar">
+                                <div class="content-types">
+                                    <button class="type-btn active" data-type="text">
+                                        <span class="icon">📝</span>
+                                        <span class="label">Texto</span>
+                                    </button>
+                                    <button class="type-btn" data-type="image">
+                                        <span class="icon">🖼️</span>
+                                        <span class="label">Imagem</span>
+                                    </button>
+                                    <button class="type-btn" data-type="video">
+                                        <span class="icon">🎥</span>
+                                        <span class="label">Vídeo</span>
+                                    </button>
+                                    <button class="type-btn" data-type="link">
+                                        <span class="icon">🔗</span>
+                                        <span class="label">Link</span>
+                                    </button>
+                                    <button class="type-btn" data-type="question">
+                                        <span class="icon">❓</span>
+                                        <span class="label">Pergunta</span>
+                                    </button>
+                                </div>
+                                
+                                <div class="create-actions">
+                                    <button class="privacy-btn">
+                                        🌍 Público
+                                        <span class="dropdown-arrow">▼</span>
+                                    </button>
+                                    <button class="publish-btn">
+                                        Publicar
+                                        <span class="shortcut">Ctrl+Enter</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feed Filters -->
+            <div class="feed-filters">
+                <div class="filter-tabs">
+                    <button class="filter-tab active">🔥 Trending</button>
+                    <button class="filter-tab">⏰ Recentes</button>
+                    <button class="filter-tab">👥 Seguindo</button>
+                    <button class="filter-tab">📚 Por Tópico</button>
+                </div>
+                
+                <div class="view-options">
+                    <button class="view-btn active" title="Visualização em Cards">⊞</button>
+                    <button class="view-btn" title="Visualização em Lista">☰</button>
+                    <button class="view-btn" title="Visualização Compacta">▤</button>
+                </div>
+            </div>
+
+            <!-- Posts Feed -->
+            <div class="posts-feed">
+                <!-- Post 1 - Destaque -->
+                <article class="post-card featured">
+                    <div class="post-badges">
+                        <span class="badge trending">🔥 Trending</span>
+                        <span class="badge featured">⭐ Destaque</span>
+                    </div>
+                    
+                    <div class="post-header">
+                        <div class="user-info">
+                            <div class="user-avatar verified">M</div>
+                            <div class="user-details">
+                                <h4>Prof. Maria Silva <span class="verified-badge">✓</span></h4>
+                                <div class="user-meta">
+                                    <span class="user-title">Professora de Matemática • USP</span>
+                                    <span class="post-time">2 horas atrás</span>
+                                    <span class="post-visibility">🌍 Público</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="post-actions-menu">
+                            <button class="menu-btn">⋯</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post-content">
+                        <h2>Guia Completo: Álgebra Linear para Iniciantes</h2>
+                        <p>Preparei um material abrangente sobre os fundamentos da álgebra linear, incluindo conceitos básicos, exercícios práticos e aplicações no mundo real. Este guia é perfeito para estudantes que estão começando sua jornada na matemática avançada! 📐✨</p>
+                        
+                        <div class="post-attachments">
+                            <div class="attachment">
+                                <div class="attachment-icon">📄</div>
+                                <div class="attachment-info">
+                                    <span class="attachment-name">algebra-linear-guia-completo.pdf</span>
+                                    <span class="attachment-size">2.4 MB</span>
+                                </div>
+                                <button class="download-btn">⬇️</button>
+                            </div>
+                        </div>
+                        
+                        <div class="post-tags">
+                            <span class="tag">#matematica</span>
+                            <span class="tag">#algebra-linear</span>
+                            <span class="tag">#tutorial</span>
+                            <span class="tag">#iniciantes</span>
+                            <span class="tag">#pdf</span>
+                        </div>
+                    </div>
+                    
+                    <div class="post-engagement">
+                        <div class="engagement-summary">
+                            <div class="reactions-preview">
+                                <span class="reaction">❤️</span>
+                                <span class="reaction">👏</span>
+                                <span class="reaction">🎯</span>
+                                <span class="count">124 reações</span>
+                            </div>
+                            <div class="engagement-stats">
+                                <span>23 comentários</span>
+                                <span>12 compartilhamentos</span>
+                            </div>
+                        </div>
+                        
+                        <div class="post-actions-bar">
+                            <button class="action-btn like">
+                                <span class="icon">❤️</span>
+                                <span class="label">Curtir</span>
+                                <span class="shortcut">L</span>
+                            </button>
+                            <button class="action-btn comment">
+                                <span class="icon">💬</span>
+                                <span class="label">Comentar</span>
+                                <span class="shortcut">C</span>
+                            </button>
+                            <button class="action-btn share">
+                                <span class="icon">📤</span>
+                                <span class="label">Compartilhar</span>
+                                <span class="shortcut">S</span>
+                            </button>
+                            <button class="action-btn save">
+                                <span class="icon">🔖</span>
+                                <span class="label">Salvar</span>
+                                <span class="shortcut">B</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 2 -->
+                <article class="post-card">
+                    <div class="post-header">
+                        <div class="user-info">
+                            <div class="user-avatar">J</div>
+                            <div class="user-details">
+                                <h4>João Santos</h4>
+                                <div class="user-meta">
+                                    <span class="user-title">Estudante de Ciência da Computação</span>
+                                    <span class="post-time">4 horas atrás</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="post-actions-menu">
+                            <button class="menu-btn">⋯</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post-content">
+                        <h3>🚀 Acabei de terminar meu primeiro projeto em React!</h3>
+                        <p>Depois de 3 semanas intensivas de estudo, finalmente consegui criar minha primeira aplicação web funcional. É uma calculadora simples, mas estou muito orgulhoso do resultado! Obrigado a todos que me ajudaram com dicas valiosas nos comentários. A jornada continua! 🙏</p>
+                        
+                        <div class="post-media">
+                            <div class="media-placeholder">
+                                <span class="media-icon">🖼️</span>
+                                <span class="media-text">Screenshot do Projeto</span>
+                            </div>
+                        </div>
+                        
+                        <div class="post-tags">
+                            <span class="tag">#react</span>
+                            <span class="tag">#javascript</span>
+                            <span class="tag">#projeto</span>
+                            <span class="tag">#conquista</span>
+                            <span class="tag">#primeiro-projeto</span>
+                        </div>
+                    </div>
+                    
+                    <div class="post-engagement">
+                        <div class="engagement-summary">
+                            <div class="reactions-preview">
+                                <span class="reaction">👏</span>
+                                <span class="reaction">🎉</span>
+                                <span class="count">89 reações</span>
+                            </div>
+                            <div class="engagement-stats">
+                                <span>15 comentários</span>
+                                <span>7 compartilhamentos</span>
+                            </div>
+                        </div>
+                        
+                        <div class="post-actions-bar">
+                            <button class="action-btn like">
+                                <span class="icon">❤️</span>
+                                <span class="label">Curtir</span>
+                            </button>
+                            <button class="action-btn comment">
+                                <span class="icon">💬</span>
+                                <span class="label">Comentar</span>
+                            </button>
+                            <button class="action-btn share">
+                                <span class="icon">📤</span>
+                                <span class="label">Compartilhar</span>
+                            </button>
+                            <button class="action-btn save">
+                                <span class="icon">🔖</span>
+                                <span class="label">Salvar</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Post 3 -->
+                <article class="post-card">
+                    <div class="post-header">
+                        <div class="user-info">
+                            <div class="user-avatar verified">A</div>
+                            <div class="user-details">
+                                <h4>Dra. Ana Costa <span class="verified-badge">✓</span></h4>
+                                <div class="user-meta">
+                                    <span class="user-title">Pesquisadora em IA • Google Research</span>
+                                    <span class="post-time">6 horas atrás</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="post-actions-menu">
+                            <button class="menu-btn">⋯</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post-content">
+                        <h3>📊 Paper Interessante: "Attention Is All You Need"</h3>
+                        <p>Acabei de finalizar a leitura deste paper fundamental sobre arquitetura Transformer. Este trabalho revolucionou completamente como pensamos sobre processamento de linguagem natural e estabeleceu as bases para os modelos de IA modernos. Alguém mais está estudando esta arquitetura? Vamos discutir! 🤓</p>
+                        
+                        <div class="post-link-preview">
+                            <div class="link-content">
+                                <div class="link-info">
+                                    <h4>Attention Is All You Need</h4>
+                                    <p>Vaswani et al. • arXiv:1706.03762</p>
+                                    <span class="link-domain">arxiv.org</span>
+                                </div>
+                                <div class="link-thumbnail">📄</div>
+                            </div>
+                        </div>
+                        
+                        <div class="post-tags">
+                            <span class="tag">#ia</span>
+                            <span class="tag">#nlp</span>
+                            <span class="tag">#transformers</span>
+                            <span class="tag">#pesquisa</span>
+                            <span class="tag">#paper</span>
+                        </div>
+                    </div>
+                    
+                    <div class="post-engagement">
+                        <div class="engagement-summary">
+                            <div class="reactions-preview">
+                                <span class="reaction">🧠</span>
+                                <span class="reaction">👏</span>
+                                <span class="reaction">🔥</span>
+                                <span class="count">156 reações</span>
+                            </div>
+                            <div class="engagement-stats">
+                                <span>34 comentários</span>
+                                <span>28 compartilhamentos</span>
+                            </div>
+                        </div>
+                        
+                        <div class="post-actions-bar">
+                            <button class="action-btn like liked">
+                                <span class="icon">❤️</span>
+                                <span class="label">Curtir</span>
+                            </button>
+                            <button class="action-btn comment">
+                                <span class="icon">💬</span>
+                                <span class="label">Comentar</span>
+                            </button>
+                            <button class="action-btn share">
+                                <span class="icon">📤</span>
+                                <span class="label">Compartilhar</span>
+                            </button>
+                            <button class="action-btn save saved">
+                                <span class="icon">🔖</span>
+                                <span class="label">Salvo</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="sidebar-right">
+            <!-- Trending Topics -->
+            <div class="sidebar-card">
+                <div class="card-header">
+                    <h3>📈 Tópicos em Alta</h3>
+                    <button class="card-action">Ver todos</button>
+                </div>
+                
+                <div class="trending-list">
+                    <div class="trending-item">
+                        <div class="trending-info">
+                            <h4>Machine Learning para Iniciantes</h4>
+                            <div class="trending-meta">
+                                <span class="trend-growth">↗️ +24%</span>
+                                <span class="trend-posts">2.1k posts</span>
+                            </div>
+                        </div>
+                        <div class="trending-chart">📊</div>
+                    </div>
+                    
+                    <div class="trending-item">
+                        <div class="trending-info">
+                            <h4>Python vs JavaScript</h4>
+                            <div class="trending-meta">
+                                <span class="trend-growth">↗️ +18%</span>
+                                <span class="trend-posts">1.8k posts</span>
+                            </div>
+                        </div>
+                        <div class="trending-chart">📊</div>
+                    </div>
+                    
+                    <div class="trending-item">
+                        <div class="trending-info">
+                            <h4>Dicas de Estudo ENEM 2024</h4>
+                            <div class="trending-meta">
+                                <span class="trend-growth">↗️ +45%</span>
+                                <span class="trend-posts">3.4k posts</span>
+                            </div>
+                        </div>
+                        <div class="trending-chart">📊</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Suggested Connections -->
+            <div class="sidebar-card">
+                <div class="card-header">
+                    <h3>💡 Pessoas para Seguir</h3>
+                    <button class="card-action">Ver sugestões</button>
+                </div>
+                
+                <div class="suggestions-list">
+                    <div class="suggestion-item">
+                        <div class="suggestion-user">
+                            <div class="user-avatar verified">P</div>
+                            <div class="user-info">
+                                <h4>Prof. Carlos Lima <span class="verified-badge">✓</span></h4>
+                                <span class="user-title">Especialista em Física Quântica</span>
+                                <div class="mutual-connections">3 conexões em comum</div>
+                            </div>
+                        </div>
+                        <button class="follow-btn">Seguir</button>
+                    </div>
+                    
+                    <div class="suggestion-item">
+                        <div class="suggestion-user">
+                            <div class="user-avatar">L</div>
+                            <div class="user-info">
+                                <h4>Laura Mendes</h4>
+                                <span class="user-title">Full Stack Developer</span>
+                                <div class="mutual-connections">7 conexões em comum</div>
+                            </div>
+                        </div>
+                        <button class="follow-btn">Seguir</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upcoming Events -->
+            <div class="sidebar-card">
+                <div class="card-header">
+                    <h3>📅 Próximos Eventos</h3>
+                    <button class="card-action">Ver agenda</button>
+                </div>
+                
+                <div class="events-list">
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="day">26</span>
+                            <span class="month">JUL</span>
+                        </div>
+                        <div class="event-info">
+                            <h4>Workshop: Introdução ao React</h4>
+                            <div class="event-meta">
+                                <span class="event-time">🕕 19:00</span>
+                                <span class="event-type">💻 Online</span>
+                            </div>
+                            <div class="event-attendees">+234 interessados</div>
+                        </div>
+                    </div>
+                    
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="day">28</span>
+                            <span class="month">JUL</span>
+                        </div>
+                        <div class="event-info">
+                            <h4>Hackathon Educacional</h4>
+                            <div class="event-meta">
+                                <span class="event-time">🕘 09:00</span>
+                                <span class="event-type">📍 São Paulo</span>
+                            </div>
+                            <div class="event-attendees">+156 confirmados</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="sidebar-card stats-card">
+                <div class="card-header">
+                    <h3>📊 Suas Estatísticas</h3>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-value">47</div>
+                        <div class="stat-label">Horas esta semana</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">234</div>
+                        <div class="stat-label">Seguidores</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">89</div>
+                        <div class="stat-label">Posts curtidos</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">12</div>
+                        <div class="stat-label">Cursos ativos</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

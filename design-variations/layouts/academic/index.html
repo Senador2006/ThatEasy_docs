@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThatEasy - Plataforma Acadêmica</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Academic Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="institution-info">
+                <div class="logo-academic">
+                    <span class="logo-icon">🎓</span>
+                    <div class="logo-text">
+                        <h1>ThatEasy</h1>
+                        <span class="subtitle">Plataforma Educacional</span>
+                    </div>
+                </div>
+                <div class="academic-year">
+                    <span class="year-label">Ano Letivo</span>
+                    <span class="year-value">2024.2</span>
+                </div>
+            </div>
+            
+            <nav class="main-navigation">
+                <a href="#" class="nav-link active">
+                    <span class="nav-icon">📚</span>
+                    <span class="nav-text">Biblioteca</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <span class="nav-icon">👨‍🏫</span>
+                    <span class="nav-text">Professores</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <span class="nav-icon">📝</span>
+                    <span class="nav-text">Atividades</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <span class="nav-icon">📊</span>
+                    <span class="nav-text">Notas</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <span class="nav-icon">🤖</span>
+                    <span class="nav-text">Tutor IA</span>
+                </a>
+            </nav>
+            
+            <div class="user-academic-info">
+                <div class="user-details">
+                    <span class="user-name">João Silva</span>
+                    <span class="user-id">Matrícula: 2024.1.001</span>
+                    <span class="user-course">Ciência da Computação</span>
+                </div>
+                <div class="user-avatar">JS</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Academic Layout -->
+    <div class="academic-container">
+        <!-- Left Academic Panel -->
+        <aside class="academic-sidebar">
+            <!-- Academic Calendar -->
+            <div class="academic-widget">
+                <h3 class="widget-title">📅 Calendário Acadêmico</h3>
+                <div class="calendar-mini">
+                    <div class="calendar-header">
+                        <button class="calendar-nav" onclick="changeMonth(-1)">‹</button>
+                        <span class="current-month">Novembro 2024</span>
+                        <button class="calendar-nav" onclick="changeMonth(1)">›</button>
+                    </div>
+                    <div class="calendar-days">
+                        <div class="day-header">D</div>
+                        <div class="day-header">S</div>
+                        <div class="day-header">T</div>
+                        <div class="day-header">Q</div>
+                        <div class="day-header">Q</div>
+                        <div class="day-header">S</div>
+                        <div class="day-header">S</div>
+                        
+                        <div class="day"></div>
+                        <div class="day"></div>
+                        <div class="day"></div>
+                        <div class="day"></div>
+                        <div class="day"></div>
+                        <div class="day">1</div>
+                        <div class="day">2</div>
+                        <div class="day">3</div>
+                        <div class="day">4</div>
+                        <div class="day">5</div>
+                        <div class="day">6</div>
+                        <div class="day">7</div>
+                        <div class="day">8</div>
+                        <div class="day">9</div>
+                        <div class="day">10</div>
+                        <div class="day">11</div>
+                        <div class="day">12</div>
+                        <div class="day">13</div>
+                        <div class="day">14</div>
+                        <div class="day">15</div>
+                        <div class="day">16</div>
+                        <div class="day">17</div>
+                        <div class="day">18</div>
+                        <div class="day">19</div>
+                        <div class="day">20</div>
+                        <div class="day">21</div>
+                        <div class="day">22</div>
+                        <div class="day">23</div>
+                        <div class="day today">24</div>
+                        <div class="day">25</div>
+                        <div class="day assignment">26</div>
+                        <div class="day">27</div>
+                        <div class="day">28</div>
+                        <div class="day">29</div>
+                        <div class="day">30</div>
+                    </div>
+                </div>
+                <div class="calendar-events">
+                    <div class="event-item">
+                        <span class="event-date">26 Nov</span>
+                        <span class="event-title">Entrega de Projeto</span>
+                    </div>
+                    <div class="event-item">
+                        <span class="event-date">30 Nov</span>
+                        <span class="event-title">Prova de Cálculo</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Current Courses -->
+            <div class="academic-widget">
+                <h3 class="widget-title">📖 Disciplinas Atuais</h3>
+                <div class="courses-list">
+                    <div class="course-item active">
+                        <div class="course-info">
+                            <h4>Algoritmos e Estruturas de Dados</h4>
+                            <span class="course-code">CC301</span>
+                            <span class="course-professor">Prof. Maria Santos</span>
+                        </div>
+                        <div class="course-grade">A</div>
+                    </div>
+                    
+                    <div class="course-item">
+                        <div class="course-info">
+                            <h4>Cálculo Diferencial e Integral</h4>
+                            <span class="course-code">MAT201</span>
+                            <span class="course-professor">Prof. João Lima</span>
+                        </div>
+                        <div class="course-grade">B+</div>
+                    </div>
+                    
+                    <div class="course-item">
+                        <div class="course-info">
+                            <h4>Programação Orientada a Objetos</h4>
+                            <span class="course-code">CC302</span>
+                            <span class="course-professor">Prof. Ana Costa</span>
+                        </div>
+                        <div class="course-grade">A-</div>
+                    </div>
+                    
+                    <div class="course-item">
+                        <div class="course-info">
+                            <h4>Física para Computação</h4>
+                            <span class="course-code">FIS101</span>
+                            <span class="course-professor">Prof. Carlos Oliveira</span>
+                        </div>
+                        <div class="course-grade">B</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Academic Performance -->
+            <div class="academic-widget">
+                <h3 class="widget-title">📈 Desempenho Acadêmico</h3>
+                <div class="performance-metrics">
+                    <div class="metric-item">
+                        <span class="metric-label">CRA (Coeficiente)</span>
+                        <span class="metric-value excellent">8.7</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">Créditos Concluídos</span>
+                        <span class="metric-value">124/180</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">Período Atual</span>
+                        <span class="metric-value">6º Semestre</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">Previsão de Formatura</span>
+                        <span class="metric-value">2026.1</span>
+                    </div>
+                </div>
+                
+                <div class="progress-academic">
+                    <div class="progress-label">Progresso do Curso</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 69%"></div>
+                    </div>
+                    <div class="progress-text">69% concluído</div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Academic Content -->
+        <main class="main-academic-content">
+            <!-- Breadcrumb Navigation -->
+            <nav class="breadcrumb">
+                <a href="#" class="breadcrumb-item">Início</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="#" class="breadcrumb-item">Biblioteca</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current">Recursos Recentes</span>
+            </nav>
+
+            <!-- Academic Search -->
+            <div class="academic-search-section">
+                <div class="search-container">
+                    <h2>🔍 Busca Acadêmica</h2>
+                    <div class="search-form">
+                        <input type="text" class="search-input" placeholder="Buscar artigos, livros, teses, dissertações...">
+                        <select class="search-filter">
+                            <option>Todos os tipos</option>
+                            <option>Artigos científicos</option>
+                            <option>Livros</option>
+                            <option>Teses</option>
+                            <option>Dissertações</option>
+                            <option>Aulas</option>
+                        </select>
+                        <button class="search-btn">Buscar</button>
+                    </div>
+                    <div class="search-suggestions">
+                        <span class="suggestion-label">Sugestões:</span>
+                        <button class="suggestion-tag">Machine Learning</button>
+                        <button class="suggestion-tag">Algoritmos</button>
+                        <button class="suggestion-tag">Cálculo</button>
+                        <button class="suggestion-tag">Programação</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Academic Content -->
+            <section class="featured-content-section">
+                <h2>⭐ Conteúdo em Destaque</h2>
+                <div class="featured-grid">
+                    <article class="featured-item large">
+                        <div class="featured-badge">🏆 Artigo Premiado</div>
+                        <div class="featured-content">
+                            <h3>Advances in Machine Learning Algorithms for Educational Data Mining</h3>
+                            <p class="featured-meta">
+                                <span class="author">Dr. Maria Silva, Dr. João Santos</span>
+                                <span class="publication">Journal of Educational Technology</span>
+                                <span class="year">2024</span>
+                            </p>
+                            <p class="featured-abstract">
+                                Este artigo apresenta novos algoritmos de aprendizado de máquina especificamente desenvolvidos para mineração de dados educacionais, com foco na personalização do aprendizado...
+                            </p>
+                            <div class="featured-actions">
+                                <button class="btn-primary">📖 Ler Artigo</button>
+                                <button class="btn-secondary">📥 Download PDF</button>
+                                <button class="btn-secondary">📋 Citar</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="featured-item">
+                        <div class="featured-content">
+                            <h4>Estruturas de Dados Avançadas</h4>
+                            <p class="featured-meta">
+                                <span class="author">Prof. Ana Costa</span>
+                                <span class="type">Videoaula</span>
+                            </p>
+                            <p>Aula completa sobre árvores B+ e sua implementação em sistemas de banco de dados.</p>
+                            <div class="featured-stats">
+                                <span>⏱️ 45min</span>
+                                <span>👥 1,234 visualizações</span>
+                                <span>⭐ 4.8/5</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="featured-item">
+                        <div class="featured-content">
+                            <h4>Cálculo Diferencial - Exercícios</h4>
+                            <p class="featured-meta">
+                                <span class="author">Prof. João Lima</span>
+                                <span class="type">Lista de Exercícios</span>
+                            </p>
+                            <p>50 exercícios resolvidos sobre derivadas e suas aplicações práticas.</p>
+                            <div class="featured-stats">
+                                <span>📝 50 exercícios</span>
+                                <span>✅ Resolvidos</span>
+                                <span>📊 Nível: Intermediário</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Recent Academic Resources -->
+            <section class="resources-section">
+                <div class="section-header">
+                    <h2>📚 Recursos Acadêmicos Recentes</h2>
+                    <div class="section-filters">
+                        <button class="filter-btn active">Todos</button>
+                        <button class="filter-btn">Artigos</button>
+                        <button class="filter-btn">Videoaulas</button>
+                        <button class="filter-btn">Exercícios</button>
+                        <button class="filter-btn">Referências</button>
+                    </div>
+                </div>
+
+                <div class="resources-list">
+                    <!-- Academic Resource Item -->
+                    <article class="resource-item">
+                        <div class="resource-type-badge article">Artigo Científico</div>
+                        <div class="resource-content">
+                            <div class="resource-header">
+                                <h3>Neural Networks in Computer Vision: A Comprehensive Survey</h3>
+                                <div class="resource-rating">
+                                    <span class="stars">⭐⭐⭐⭐⭐</span>
+                                    <span class="rating-value">4.9/5</span>
+                                </div>
+                            </div>
+                            
+                            <div class="resource-meta">
+                                <span class="authors">Zhang, L., Smith, J., Johnson, M.</span>
+                                <span class="separator">•</span>
+                                <span class="journal">IEEE Transactions on Pattern Analysis</span>
+                                <span class="separator">•</span>
+                                <span class="year">2024</span>
+                                <span class="separator">•</span>
+                                <span class="citations">432 citações</span>
+                            </div>
+
+                            <p class="resource-abstract">
+                                Um levantamento abrangente das técnicas de redes neurais aplicadas à visão computacional, 
+                                incluindo CNNs, Transformers e arquiteturas híbridas. O artigo analisa 150+ trabalhos 
+                                publicados entre 2020-2024 e identifica tendências emergentes na área.
+                            </p>
+
+                            <div class="resource-keywords">
+                                <span class="keyword">redes neurais</span>
+                                <span class="keyword">visão computacional</span>
+                                <span class="keyword">deep learning</span>
+                                <span class="keyword">CNN</span>
+                                <span class="keyword">transformers</span>
+                            </div>
+
+                            <div class="resource-actions">
+                                <button class="resource-btn primary">
+                                    <span class="btn-icon">📖</span>
+                                    <span>Ler Artigo</span>
+                                </button>
+                                <button class="resource-btn">
+                                    <span class="btn-icon">📥</span>
+                                    <span>Download</span>
+                                </button>
+                                <button class="resource-btn">
+                                    <span class="btn-icon">📋</span>
+                                    <span>Citar</span>
+                                </button>
+                                <button class="resource-btn">
+                                    <span class="btn-icon">🔖</span>
+                                    <span>Salvar</span>
+                                </button>
+                                <button class="resource-btn">
+                                    <span class="btn-icon">📤</span>
+                                    <span>Compartilhar</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Video Lecture Item -->
+                    <article class="resource-item">
+                        <div class="resource-type-badge video">Videoaula</div>
+                        <div class="resource-content">
+                            <div class="resource-header">
+                                <h3>Introdução aos Algoritmos de Ordenação</h3>
+                                <div class="resource-rating">
+                                    <span class="stars">⭐⭐⭐⭐⭐</span>
+                                    <span class="rating-value">4.7/5</span>
+                                </div>
+                            </div>
+                            
+                            <div class="resource-meta">
+                                <span class="authors">Prof. Maria Santos</span>
+                                <span class="separator">•</span>
+                                <span class="course">CC301 - Algoritmos e Estruturas de Dados</span>
+                                <span class="separator">•</span>
+                                <span class="duration">52 minutos</span>
+                                <span class="separator">•</span>
+                                <span class="views">2,847 visualizações</span>
+                            </div>
+
+                            <p class="resource-abstract">
+                                Aula introdutória sobre algoritmos de ordenação, abordando Bubble Sort, Selection Sort, 
+                                Insertion Sort, Merge Sort e Quick Sort. Inclui análise de complexidade temporal e 
+                                espacial, além de implementações práticas em Python.
+                            </p>
+
+                            <div class="video-chapters">
+                                <div class="chapter-item">
+                                    <span class="chapter-time">00:00</span>
+                                    <span class="chapter-title">Introdução e conceitos básicos</span>
+                                </div>
+                                <div class="chapter-item">
+                                    <span class="chapter-time">12:30</span>
+                                    <span class="chapter-title">Algoritmos simples (Bubble, Selection, Insertion)</span>
+                                </div>
+                                <div class="chapter-item">
+                                    <span class="chapter-time">35:15</span>
+                                    <span class="chapter-title">Algoritmos avançados (Merge, Quick)</span>
+                                </div>
+                            </div>
+
+                            <div class="resource-actions">
+                                <button class="resource-btn primary">
+                                    <span class="btn-icon">▶️</span>
+                                    <span>Assistir</span>
+                                </button>
+                                <button class="resource-btn">
+                                    <span class="btn-icon">📝</span>
+                                    <span>Anotações</span>
+                                </button>
+                                <button class="resource-btn">
+                                    <span class="btn-icon">📊</span>
+                                    <span>Quiz</span>
+                                </button>
+                                <button class="resource-btn">
+                                    <span class="btn-icon">🔖</span>
+                                    <span>Salvar</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Exercise Set Item -->
+                    <article class="resource-item">
+                        <div class="resource-type-badge exercise">Lista de Exercícios</div>
+                        <div class="resource-content">
+                            <div class="resource-header">
+                                <h3>Exercícios de Cálculo Diferencial - Derivadas</h3>
+                                <div class="resource-difficulty">
+                                    <span class="difficulty-label">Dificuldade:</span>
+                                    <span class="difficulty-level intermediate">Intermediário</span>
+                                </div>
+                            </div>
+                            
+                            <div class="resource-meta">
+                                <span class="authors">Prof. João Lima</span>
+                                <span class="separator">•</span>
+                                <span class="course">MAT201 - Cálculo Diferencial e Integral</span>
+                                <span class="separator">•</span>
+                                <span class="exercises-count">25 exercícios</span>
+                                <span class="separator">•</span>
+                                <span class="completion">18/25 resolvidos</span>
+                            </div>
+
+                            <p class="resource-abstract">
+                                Lista de exercícios focada em regras de derivação, derivadas de funções compostas, 
+                                derivadas implícitas e aplicações de derivadas em problemas de otimização e 
+                                análise de funções.
+                            </p>
+
+                            <div class="exercise-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 72%"></div>
+                                </div>
+                                <span class="progress-text">72% concluído</span>
+                            </div>
+
+                            <div class="exercise-topics">
+                                <span class="topic">Regra da cadeia</span>
+                                <span class="topic">Derivadas implícitas</span>
+                                <span class="topic">Otimização</span>
+                                <span class="topic">Análise de funções</span>
+                            </div>
+
+                            <div class="resource-actions">
+                                <button class="resource-btn primary">
+                                    <span class="btn-icon">📝</span>
+                                    <span>Continuar</span>
+                                </button>
+                                <button class="resource-btn">
+                                    <span class="btn-icon">✅</span>
+                                    <span>Resoluções</span>
+                                </button>
+                                <button class="resource-btn">
+                                    <span class="btn-icon">📊</span>
+                                    <span>Relatório</span>
+                                </button>
+                                <button class="resource-btn">
+                                    <span class="btn-icon">💡</span>
+                                    <span>Dicas</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Reference Book Item -->
+                    <article class="resource-item">
+                        <div class="resource-type-badge reference">Livro de Referência</div>
+                        <div class="resource-content">
+                            <div class="resource-header">
+                                <h3>Introduction to Algorithms, 4th Edition</h3>
+                                <div class="resource-rating">
+                                    <span class="stars">⭐⭐⭐⭐⭐</span>
+                                    <span class="rating-value">4.9/5</span>
+                                </div>
+                            </div>
+                            
+                            <div class="resource-meta">
+                                <span class="authors">Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest</span>
+                                <span class="separator">•</span>
+                                <span class="publisher">MIT Press</span>
+                                <span class="separator">•</span>
+                                <span class="year">2022</span>
+                                <span class="separator">•</span>
+                                <span class="pages">1,312 páginas</span>
+                            </div>
+
+                            <p class="resource-abstract">
+                                O livro de referência definitivo para algoritmos, oferecendo uma apresentação 
+                                abrangente e rigorosa de algoritmos modernos. Inclui novos capítulos sobre 
+                                algoritmos para aprendizado de máquina e análise de dados.
+                            </p>
+
+                            <div class="book-chapters">
+                                <div class="chapter-group">
+                                    <span class="group-title">Parte I: Fundamentos</span>
+                                    <div class="chapter-list">
+                                        <span class="chapter">Cap. 1: O papel dos algoritmos</span>
+                                        <span class="chapter">Cap. 2: Começando</span>
+                                        <span class="chapter">Cap. 3: Caracterizando tempos de execução</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="resource-actions">
+                                <button class="resource-btn primary">
+                                    <span class="btn-icon">📖</span>
+                                    <span>Ler Online</span>
+                                </button>
+                                <button class="resource-btn">
+                                    <span class="btn-icon">📥</span>
+                                    <span>Download PDF</span>
+                                </button>
+                                <button class="resource-btn">
+                                    <span class="btn-icon">🔖</span>
+                                    <span>Favoritar</span>
+                                </button>
+                                <button class="resource-btn">
+                                    <span class="btn-icon">📋</span>
+                                    <span>Citar</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Load More -->
+                <div class="load-more-section">
+                    <button class="load-more-btn">
+                        <span>Carregar mais recursos</span>
+                        <span class="load-icon">⬇️</span>
+                    </button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Right Academic Panel -->
+        <aside class="academic-right-panel">
+            <!-- AI Tutor -->
+            <div class="academic-widget">
+                <h3 class="widget-title">🤖 Tutor IA Acadêmico</h3>
+                <div class="ai-tutor-card">
+                    <div class="ai-status">
+                        <span class="status-indicator online"></span>
+                        <span class="status-text">Disponível</span>
+                    </div>
+                    <p class="ai-greeting">Olá! Sou seu tutor inteligente. Como posso ajudar com seus estudos hoje?</p>
+                    <div class="ai-suggestions">
+                        <button class="ai-suggestion-btn">Explicar conceito</button>
+                        <button class="ai-suggestion-btn">Resolver exercício</button>
+                        <button class="ai-suggestion-btn">Revisar matéria</button>
+                    </div>
+                    <button class="ai-chat-btn">💬 Iniciar conversa</button>
+                </div>
+            </div>
+
+            <!-- Upcoming Assignments -->
+            <div class="academic-widget">
+                <h3 class="widget-title">📝 Próximas Entregas</h3>
+                <div class="assignments-list">
+                    <div class="assignment-item urgent">
+                        <div class="assignment-header">
+                            <h4>Projeto Final - Sistema Web</h4>
+                            <span class="assignment-due urgent">Entrega: Amanhã</span>
+                        </div>
+                        <p class="assignment-course">CC302 - Programação OO</p>
+                        <div class="assignment-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%"></div>
+                            </div>
+                            <span class="progress-text">85% concluído</span>
+                        </div>
+                    </div>
+
+                    <div class="assignment-item">
+                        <div class="assignment-header">
+                            <h4>Lista de Exercícios - Integrais</h4>
+                            <span class="assignment-due">Entrega: 30 Nov</span>
+                        </div>
+                        <p class="assignment-course">MAT201 - Cálculo</p>
+                        <div class="assignment-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 60%"></div>
+                            </div>
+                            <span class="progress-text">60% concluído</span>
+                        </div>
+                    </div>
+
+                    <div class="assignment-item">
+                        <div class="assignment-header">
+                            <h4>Relatório de Laboratório</h4>
+                            <span class="assignment-due">Entrega: 05 Dez</span>
+                        </div>
+                        <p class="assignment-course">FIS101 - Física</p>
+                        <div class="assignment-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 30%"></div>
+                            </div>
+                            <span class="progress-text">30% concluído</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Study Groups -->
+            <div class="academic-widget">
+                <h3 class="widget-title">👥 Grupos de Estudo</h3>
+                <div class="study-groups-list">
+                    <div class="study-group-item">
+                        <div class="group-info">
+                            <h4>Algoritmos Avançados</h4>
+                            <span class="group-members">12 membros</span>
+                            <span class="group-next">Próxima sessão: Hoje 19h</span>
+                        </div>
+                        <button class="join-session-btn">Entrar</button>
+                    </div>
+
+                    <div class="study-group-item">
+                        <div class="group-info">
+                            <h4>Cálculo - Preparação P2</h4>
+                            <span class="group-members">8 membros</span>
+                            <span class="group-next">Próxima sessão: Amanhã 14h</span>
+                        </div>
+                        <button class="join-session-btn">Entrar</button>
+                    </div>
+
+                    <div class="study-group-item">
+                        <div class="group-info">
+                            <h4>Física Experimental</h4>
+                            <span class="group-members">6 membros</span>
+                            <span class="group-next">Próxima sessão: Ter 16h</span>
+                        </div>
+                        <button class="join-session-btn">Entrar</button>
+                    </div>
+                </div>
+                <button class="create-group-btn">+ Criar novo grupo</button>
+            </div>
+
+            <!-- Academic News -->
+            <div class="academic-widget">
+                <h3 class="widget-title">📰 Notícias Acadêmicas</h3>
+                <div class="news-list">
+                    <div class="news-item">
+                        <h4>Nova Biblioteca Digital Disponível</h4>
+                        <p>Acesso gratuito a mais de 10.000 artigos científicos da IEEE.</p>
+                        <span class="news-date">Há 2 dias</span>
+                    </div>
+
+                    <div class="news-item">
+                        <h4>Simpósio de IA - Inscrições Abertas</h4>
+                        <p>II Simpósio de Inteligência Artificial acontece em dezembro.</p>
+                        <span class="news-date">Há 3 dias</span>
+                    </div>
+
+                    <div class="news-item">
+                        <h4>Calendário de Provas Finais</h4>
+                        <p>Confira as datas das avaliações finais do semestre 2024.2.</p>
+                        <span class="news-date">Há 1 semana</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

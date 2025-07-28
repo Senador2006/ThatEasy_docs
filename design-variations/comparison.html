@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThatEasy - Comparação de Layouts</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+
+        .header {
+            background: white;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #3b82f6;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #64748b;
+            margin-top: 4px;
+        }
+
+        .view-controls {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .view-btn {
+            padding: 8px 16px;
+            border: 1px solid #e2e8f0;
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        .view-btn.active {
+            background: #3b82f6;
+            color: white;
+            border-color: #3b82f6;
+        }
+
+        .view-btn:hover:not(.active) {
+            background: #f1f5f9;
+        }
+
+        .comparison-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .intro-section {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 32px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .intro-section h1 {
+            font-size: 28px;
+            margin-bottom: 12px;
+            color: #1e293b;
+        }
+
+        .intro-section p {
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .feature-comparison {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 16px;
+            margin-top: 16px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 12px;
+        }
+
+        .feature-item {
+            background: white;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+
+        .feature-item h4 {
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #1e293b;
+        }
+
+        .feature-tags {
+            display: flex;
+            gap: 4px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .feature-tag {
+            font-size: 10px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            background: #eff6ff;
+            color: #3b82f6;
+        }
+
+        .layouts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        .layout-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s;
+        }
+
+        .layout-card:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .layout-preview {
+            height: 300px;
+            background: #f1f5f9;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .layout-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            transform: scale(0.7);
+            transform-origin: top left;
+            width: 142.86%;
+            height: 142.86%;
+        }
+
+        .layout-info {
+            padding: 20px;
+        }
+
+        .layout-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #1e293b;
+        }
+
+        .layout-description {
+            color: #64748b;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 16px;
+        }
+
+        .layout-features {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+
+        .feature-badge {
+            font-size: 11px;
+            padding: 4px 8px;
+            border-radius: 6px;
+            background: #f1f5f9;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .layout-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .action-btn {
+            flex: 1;
+            padding: 8px 16px;
+            border: 1px solid #e2e8f0;
+            background: white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .action-btn.primary {
+            background: #3b82f6;
+            color: white;
+            border-color: #3b82f6;
+        }
+
+        .action-btn:hover:not(.primary) {
+            background: #f8fafc;
+        }
+
+        .action-btn.primary:hover {
+            background: #2563eb;
+        }
+
+        .detailed-comparison {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            border: 1px solid #e2e8f0;
+            margin-bottom: 32px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .comparison-table th {
+            background: #f8fafc;
+            font-weight: 600;
+            color: #374151;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .comparison-table td {
+            font-size: 14px;
+            color: #64748b;
+        }
+
+        .comparison-table .layout-name {
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .rating {
+            display: flex;
+            gap: 2px;
+        }
+
+        .star {
+            color: #fbbf24;
+            font-size: 12px;
+        }
+
+        .star.empty {
+            color: #e5e7eb;
+        }
+
+        .pros-cons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .pros-cons-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .pros-cons-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #1e293b;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .pros-cons-list {
+            list-style: none;
+        }
+
+        .pros-cons-list li {
+            padding: 8px 0;
+            color: #64748b;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .pros-cons-list.pros li::before {
+            content: "✅ ";
+            margin-right: 8px;
+        }
+
+        .pros-cons-list.cons li::before {
+            content: "❌ ";
+            margin-right: 8px;
+        }
+
+        .recommendation-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 32px;
+            text-align: center;
+        }
+
+        .recommendation-section h2 {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        .recommendation-section p {
+            font-size: 16px;
+            opacity: 0.9;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .recommendation-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .recommendation-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .layouts-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .comparison-table {
+                font-size: 12px;
+            }
+            
+            .comparison-table th,
+            .comparison-table td {
+                padding: 8px;
+            }
+            
+            .pros-cons {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div>
+                <div class="logo">🎨 ThatEasy Design Variations</div>
+                <div class="subtitle">Comparação de diferentes abordagens de UX/UI</div>
+            </div>
+            <div class="view-controls">
+                <button class="view-btn active" onclick="showView('overview')">Visão Geral</button>
+                <button class="view-btn" onclick="showView('detailed')">Comparação Detalhada</button>
+                <button class="view-btn" onclick="showView('pros-cons')">Prós & Contras</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="comparison-container">
+        <!-- Intro Section -->
+        <div class="intro-section">
+            <h1>Comparação de Layouts - ThatEasy</h1>
+            <p>Esta página apresenta diferentes abordagens de design para a plataforma educacional ThatEasy. Cada layout foi desenvolvido com foco em diferentes necessidades e cenários de uso, permitindo uma análise comparativa das melhores práticas de UX/UI.</p>
+            
+            <div class="feature-comparison">
+                <h3>Características por Layout:</h3>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <h4>📱 Mobile-First</h4>
+                        <div class="feature-tags">
+                            <span class="feature-tag">Touch-friendly</span>
+                            <span class="feature-tag">Bottom Nav</span>
+                            <span class="feature-tag">Gestos</span>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <h4>💻 Desktop-Focused</h4>
+                        <div class="feature-tags">
+                            <span class="feature-tag">Multi-coluna</span>
+                            <span class="feature-tag">Atalhos</span>
+                            <span class="feature-tag">Sidebar fixa</span>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <h4>✨ Minimalista</h4>
+                        <div class="feature-tags">
+                            <span class="feature-tag">Clean</span>
+                            <span class="feature-tag">Tipografia</span>
+                            <span class="feature-tag">Foco conteúdo</span>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <h4>📊 Dashboard</h4>
+                        <div class="feature-tags">
+                            <span class="feature-tag">Métricas</span>
+                            <span class="feature-tag">Visualização</span>
+                            <span class="feature-tag">Analytics</span>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <h4>🎓 Acadêmico</h4>
+                        <div class="feature-tags">
+                            <span class="feature-tag">Formal</span>
+                            <span class="feature-tag">Estruturado</span>
+                            <span class="feature-tag">Educacional</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Overview View -->
+        <div id="overview-view">
+            <div class="layouts-grid">
+                <!-- Mobile-First Layout -->
+                <div class="layout-card">
+                    <div class="layout-preview">
+                        <iframe class="layout-iframe" src="layouts/mobile-first/index.html"></iframe>
+                    </div>
+                    <div class="layout-info">
+                        <h3 class="layout-title">📱 Mobile-First</h3>
+                        <p class="layout-description">Otimizado para dispositivos móveis com navegação bottom, gestos touch e interface responsiva.</p>
+                        <div class="layout-features">
+                            <span class="feature-badge">Touch-friendly</span>
+                            <span class="feature-badge">Bottom Navigation</span>
+                            <span class="feature-badge">Swipe Gestures</span>
+                            <span class="feature-badge">Infinite Scroll</span>
+                        </div>
+                        <div class="layout-actions">
+                            <button class="action-btn primary" onclick="openLayout('mobile-first')">Visualizar</button>
+                            <button class="action-btn" onclick="viewCode('mobile-first')">Ver Código</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desktop-Focused Layout -->
+                <div class="layout-card">
+                    <div class="layout-preview">
+                        <iframe class="layout-iframe" src="layouts/desktop-focused/index.html"></iframe>
+                    </div>
+                    <div class="layout-info">
+                        <h3 class="layout-title">💻 Desktop-Focused</h3>
+                        <p class="layout-description">Aproveita ao máximo o espaço desktop com layout multi-coluna e sidebar expandida.</p>
+                        <div class="layout-features">
+                            <span class="feature-badge">Multi-coluna</span>
+                            <span class="feature-badge">Sidebar fixa</span>
+                            <span class="feature-badge">Atalhos</span>
+                            <span class="feature-badge">Rich Content</span>
+                        </div>
+                        <div class="layout-actions">
+                            <button class="action-btn primary" onclick="openLayout('desktop-focused')">Visualizar</button>
+                            <button class="action-btn" onclick="viewCode('desktop-focused')">Ver Código</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Minimalist Layout -->
+                <div class="layout-card">
+                    <div class="layout-preview">
+                        <iframe class="layout-iframe" src="layouts/minimalist/index.html"></iframe>
+                    </div>
+                    <div class="layout-info">
+                        <h3 class="layout-title">✨ Minimalista</h3>
+                        <p class="layout-description">Design clean com foco no conteúdo, tipografia destacada e elementos visuais reduzidos.</p>
+                        <div class="layout-features">
+                            <span class="feature-badge">Clean Design</span>
+                            <span class="feature-badge">Typography Focus</span>
+                            <span class="feature-badge">Content First</span>
+                            <span class="feature-badge">Readable</span>
+                        </div>
+                        <div class="layout-actions">
+                            <button class="action-btn primary" onclick="openLayout('minimalist')">Visualizar</button>
+                            <button class="action-btn" onclick="viewCode('minimalist')">Ver Código</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dashboard Layout -->
+                <div class="layout-card">
+                    <div class="layout-preview">
+                        <iframe class="layout-iframe" src="layouts/dashboard/index.html"></iframe>
+                    </div>
+                    <div class="layout-info">
+                        <h3 class="layout-title">📊 Dashboard</h3>
+                        <p class="layout-description">Foco em métricas e visualização de dados com widgets de progresso e analytics.</p>
+                        <div class="layout-features">
+                            <span class="feature-badge">Data Viz</span>
+                            <span class="feature-badge">Metrics</span>
+                            <span class="feature-badge">Progress</span>
+                            <span class="feature-badge">Analytics</span>
+                        </div>
+                        <div class="layout-actions">
+                            <button class="action-btn primary" onclick="openLayout('dashboard')">Visualizar</button>
+                            <button class="action-btn" onclick="viewCode('dashboard')">Ver Código</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Academic Layout -->
+                <div class="layout-card">
+                    <div class="layout-preview">
+                        <iframe class="layout-iframe" src="layouts/academic/index.html"></iframe>
+                    </div>
+                    <div class="layout-info">
+                        <h3 class="layout-title">🎓 Acadêmico</h3>
+                        <p class="layout-description">Estrutura formal com hierarquia clara, calendário acadêmico e elementos educacionais tradicionais.</p>
+                        <div class="layout-features">
+                            <span class="feature-badge">Formal</span>
+                            <span class="feature-badge">Hierárquico</span>
+                            <span class="feature-badge">Calendário</span>
+                            <span class="feature-badge">Tradicional</span>
+                        </div>
+                        <div class="layout-actions">
+                            <button class="action-btn primary" onclick="openLayout('academic')">Visualizar</button>
+                            <button class="action-btn" onclick="viewCode('academic')">Ver Código</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Comparison View -->
+        <div id="detailed-view" style="display: none;">
+            <div class="detailed-comparison">
+                <h2>Comparação Técnica Detalhada</h2>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Aspecto</th>
+                            <th>Mobile-First</th>
+                            <th>Desktop-Focused</th>
+                            <th>Minimalista</th>
+                            <th>Dashboard</th>
+                            <th>Acadêmico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="layout-name">Performance Mobile</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐</td>
+                            <td>⭐⭐</td>
+                            <td>⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td class="layout-name">Performance Desktop</td>
+                            <td>⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td class="layout-name">Facilidade de Uso</td>
+                            <td>⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td class="layout-name">Densidade de Informação</td>
+                            <td>⭐⭐</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td class="layout-name">Acessibilidade</td>
+                            <td>⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td class="layout-name">Personalização</td>
+                            <td>⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐</td>
+                            <td>⭐⭐</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                            <td>⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td class="layout-name">Tempo de Desenvolvimento</td>
+                            <td>⭐⭐⭐⭐</td>
+                            <td>⭐⭐</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                            <td>⭐⭐</td>
+                            <td>⭐⭐⭐</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Pros and Cons View -->
+        <div id="pros-cons-view" style="display: none;">
+            <div class="pros-cons">
+                <!-- Mobile-First Pros/Cons -->
+                <div class="pros-cons-card">
+                    <h3 class="pros-cons-title">📱 Mobile-First</h3>
+                    <div style="margin-bottom: 20px;">
+                        <h4 style="color: #10b981; margin-bottom: 8px;">Prós:</h4>
+                        <ul class="pros-cons-list pros">
+                            <li>Excelente experiência mobile</li>
+                            <li>Gestos intuitivos e navegação touch</li>
+                            <li>Performance otimizada</li>
+                            <li>Fácil adaptação para diferentes tamanhos</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: #ef4444; margin-bottom: 8px;">Contras:</h4>
+                        <ul class="pros-cons-list cons">
+                            <li>Aproveitamento limitado do espaço desktop</li>
+                            <li>Menos densidade de informação</li>
+                            <li>Pode parecer simplista para usuários avançados</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Desktop-Focused Pros/Cons -->
+                <div class="pros-cons-card">
+                    <h3 class="pros-cons-title">💻 Desktop-Focused</h3>
+                    <div style="margin-bottom: 20px;">
+                        <h4 style="color: #10b981; margin-bottom: 8px;">Prós:</h4>
+                        <ul class="pros-cons-list pros">
+                            <li>Máximo aproveitamento do espaço</li>
+                            <li>Alta densidade de informação</li>
+                            <li>Múltiplas funcionalidades visíveis</li>
+                            <li>Produtividade elevada</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: #ef4444; margin-bottom: 8px;">Contras:</h4>
+                        <ul class="pros-cons-list cons">
+                            <li>Complexidade pode confundir iniciantes</li>
+                            <li>Experiência mobile comprometida</li>
+                            <li>Tempo de desenvolvimento maior</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Minimalist Pros/Cons -->
+                <div class="pros-cons-card">
+                    <h3 class="pros-cons-title">✨ Minimalista</h3>
+                    <div style="margin-bottom: 20px;">
+                        <h4 style="color: #10b981; margin-bottom: 8px;">Prós:</h4>
+                        <ul class="pros-cons-list pros">
+                            <li>Foco total no conteúdo</li>
+                            <li>Excelente legibilidade</li>
+                            <li>Baixa curva de aprendizado</li>
+                            <li>Carregamento rápido</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: #ef4444; margin-bottom: 8px;">Contras:</h4>
+                        <ul class="pros-cons-list cons">
+                            <li>Funcionalidades limitadas visíveis</li>
+                            <li>Pode parecer "básico" demais</li>
+                            <li>Menos engaging para alguns usuários</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Dashboard Pros/Cons -->
+                <div class="pros-cons-card">
+                    <h3 class="pros-cons-title">📊 Dashboard</h3>
+                    <div style="margin-bottom: 20px;">
+                        <h4 style="color: #10b981; margin-bottom: 8px;">Prós:</h4>
+                        <ul class="pros-cons-list pros">
+                            <li>Rica visualização de dados</li>
+                            <li>Insights e métricas claras</li>
+                            <li>Gamificação integrada</li>
+                            <li>Motivação através de progresso</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: #ef4444; margin-bottom: 8px;">Contras:</h4>
+                        <ul class="pros-cons-list cons">
+                            <li>Complexidade de implementação</li>
+                            <li>Pode sobrecarregar usuários casuais</li>
+                            <li>Foco em métricas vs conteúdo</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Academic Pros/Cons -->
+                <div class="pros-cons-card">
+                    <h3 class="pros-cons-title">🎓 Acadêmico</h3>
+                    <div style="margin-bottom: 20px;">
+                        <h4 style="color: #10b981; margin-bottom: 8px;">Prós:</h4>
+                        <ul class="pros-cons-list pros">
+                            <li>Estrutura formal e confiável</li>
+                            <li>Calendário acadêmico integrado</li>
+                            <li>Foco em recursos educacionais</li>
+                            <li>Hierarquia clara de informações</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: #ef4444; margin-bottom: 8px;">Contras:</h4>
+                        <ul class="pros-cons-list cons">
+                            <li>Interface mais conservadora</li>
+                            <li>Pode parecer menos moderna</li>
+                            <li>Curva de aprendizado específica</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recommendation Section -->
+        <div class="recommendation-section">
+            <h2>💡 Recomendação de Implementação</h2>
+            <p>Baseado na análise comparativa, recomendamos uma abordagem híbrida que combine os melhores aspectos de cada layout. Começar com o Mobile-First como base, incorporar elementos do Dashboard para engajamento, e oferecer uma view Minimalista como opção para usuários que preferem simplicidade.</p>
+            <button class="recommendation-btn" onclick="showImplementationPlan()">Ver Plano de Implementação</button>
+        </div>
+    </div>
+
+    <script>
+        function showView(viewName) {
+            // Hide all views
+            document.getElementById('overview-view').style.display = 'none';
+            document.getElementById('detailed-view').style.display = 'none';
+            document.getElementById('pros-cons-view').style.display = 'none';
+            
+            // Show selected view
+            document.getElementById(viewName + '-view').style.display = 'block';
+            
+            // Update active button
+            document.querySelectorAll('.view-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        function openLayout(layoutName) {
+            window.open(`layouts/${layoutName}/index.html`, '_blank');
+        }
+
+        function viewCode(layoutName) {
+            // In a real implementation, this would open the code files
+            alert(`Ver código do layout ${layoutName}:\n\n• index.html\n• styles.css\n• script.js\n\nImplementar: abrir editor de código ou repositório`);
+        }
+
+        function viewSpecs(layoutName) {
+            alert(`Especificações do layout ${layoutName}:\n\n• Estrutura formal acadêmica\n• Hierarquia clara de informações\n• Elementos educacionais tradicionais\n• Navegação intuitiva para estudantes\n\nStatus: Em desenvolvimento`);
+        }
+
+        function showImplementationPlan() {
+            alert(`Plano de Implementação Híbrida:\n\n1. Base Mobile-First (Fase 1)\n2. Adicionar elementos Dashboard (Fase 2)\n3. Implementar view Minimalista (Fase 3)\n4. Testes A/B e otimizações (Fase 4)\n\nTempo estimado: 12-16 semanas`);
+        }
+
+        // Auto-refresh iframes every 30 seconds to show dynamic content
+        setInterval(() => {
+            document.querySelectorAll('.layout-iframe').forEach(iframe => {
+                const src = iframe.src;
+                iframe.src = '';
+                iframe.src = src;
+            });
+        }, 30000);
+    </script>
+</body>
+</html> 

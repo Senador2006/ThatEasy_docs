@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThatEasy - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Dashboard -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <h1 class="logo">ThatEasy</h1>
+                <span class="logo-subtitle">Analytics Dashboard</span>
+            </div>
+            
+            <div class="header-stats">
+                <div class="stat-chip">
+                    <span class="stat-label">Streak</span>
+                    <span class="stat-value">12 dias</span>
+                </div>
+                <div class="stat-chip">
+                    <span class="stat-label">XP</span>
+                    <span class="stat-value">2,847</span>
+                </div>
+                <div class="stat-chip">
+                    <span class="stat-label">Nível</span>
+                    <span class="stat-value">15</span>
+                </div>
+            </div>
+            
+            <div class="header-actions">
+                <button class="notification-btn">
+                    🔔
+                    <span class="notification-badge">5</span>
+                </button>
+                <div class="profile-menu">
+                    <div class="profile-avatar">U</div>
+                    <div class="profile-info">
+                        <span class="profile-name">Usuário</span>
+                        <span class="profile-level">Nível 15</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Dashboard Layout -->
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <nav class="nav">
+                <div class="nav-section">
+                    <h3 class="nav-section-title">Dashboard</h3>
+                    <a href="#" class="nav-item active">
+                        <span class="nav-icon">📊</span>
+                        <span class="nav-text">Visão Geral</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <span class="nav-icon">📈</span>
+                        <span class="nav-text">Progresso</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <span class="nav-icon">🎯</span>
+                        <span class="nav-text">Metas</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <span class="nav-icon">🏆</span>
+                        <span class="nav-text">Conquistas</span>
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <h3 class="nav-section-title">Conteúdo</h3>
+                    <a href="#" class="nav-item">
+                        <span class="nav-icon">🏠</span>
+                        <span class="nav-text">Feed</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <span class="nav-icon">📚</span>
+                        <span class="nav-text">Meus Estudos</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <span class="nav-icon">👥</span>
+                        <span class="nav-text">Grupos</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <span class="nav-icon">🤖</span>
+                        <span class="nav-text">IA Assistant</span>
+                    </a>
+                </div>
+            </nav>
+
+            <!-- Quick Actions Widget -->
+            <div class="quick-actions-widget">
+                <h4>Ações Rápidas</h4>
+                <div class="quick-actions">
+                    <button class="quick-action-btn">
+                        <span class="action-icon">➕</span>
+                        <span class="action-text">Nova Meta</span>
+                    </button>
+                    <button class="quick-action-btn">
+                        <span class="action-icon">📝</span>
+                        <span class="action-text">Novo Post</span>
+                    </button>
+                    <button class="quick-action-btn">
+                        <span class="action-icon">📖</span>
+                        <span class="action-text">Estudar</span>
+                    </button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Dashboard Header -->
+            <div class="dashboard-header">
+                <div class="header-info">
+                    <h1>Bem-vindo de volta! 👋</h1>
+                    <p>Aqui está o resumo da sua jornada de aprendizado</p>
+                </div>
+                <div class="time-period-selector">
+                    <button class="period-btn">Hoje</button>
+                    <button class="period-btn active">Esta Semana</button>
+                    <button class="period-btn">Este Mês</button>
+                    <button class="period-btn">Este Ano</button>
+                </div>
+            </div>
+
+            <!-- Key Metrics Grid -->
+            <div class="metrics-grid">
+                <div class="metric-card primary">
+                    <div class="metric-header">
+                        <h3>Tempo de Estudo</h3>
+                        <span class="metric-icon">⏱️</span>
+                    </div>
+                    <div class="metric-value">47h 23m</div>
+                    <div class="metric-change positive">
+                        <span class="change-icon">↗️</span>
+                        <span class="change-text">+23% vs semana passada</span>
+                    </div>
+                    <div class="metric-chart">
+                        <div class="chart-bar" style="height: 60%"></div>
+                        <div class="chart-bar" style="height: 80%"></div>
+                        <div class="chart-bar" style="height: 40%"></div>
+                        <div class="chart-bar" style="height: 90%"></div>
+                        <div class="chart-bar" style="height: 100%"></div>
+                        <div class="chart-bar" style="height: 75%"></div>
+                        <div class="chart-bar" style="height: 95%"></div>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <h3>Metas Concluídas</h3>
+                        <span class="metric-icon">🎯</span>
+                    </div>
+                    <div class="metric-value">15/20</div>
+                    <div class="metric-change positive">
+                        <span class="change-icon">↗️</span>
+                        <span class="change-text">75% de conclusão</span>
+                    </div>
+                    <div class="metric-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <h3>XP Ganho</h3>
+                        <span class="metric-icon">⭐</span>
+                    </div>
+                    <div class="metric-value">1,240 XP</div>
+                    <div class="metric-change positive">
+                        <span class="change-icon">↗️</span>
+                        <span class="change-text">+18% vs semana passada</span>
+                    </div>
+                    <div class="xp-breakdown">
+                        <div class="xp-source">
+                            <span class="source-name">Posts</span>
+                            <span class="source-value">450 XP</span>
+                        </div>
+                        <div class="xp-source">
+                            <span class="source-name">Estudos</span>
+                            <span class="source-value">790 XP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <h3>Engajamento</h3>
+                        <span class="metric-icon">💬</span>
+                    </div>
+                    <div class="metric-value">89%</div>
+                    <div class="metric-change positive">
+                        <span class="change-icon">↗️</span>
+                        <span class="change-text">+5% vs semana passada</span>
+                    </div>
+                    <div class="engagement-details">
+                        <div class="engagement-item">
+                            <span class="item-icon">❤️</span>
+                            <span class="item-count">234</span>
+                        </div>
+                        <div class="engagement-item">
+                            <span class="item-icon">💬</span>
+                            <span class="item-count">67</span>
+                        </div>
+                        <div class="engagement-item">
+                            <span class="item-icon">📤</span>
+                            <span class="item-count">45</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="charts-section">
+                <div class="chart-container large">
+                    <div class="chart-header">
+                        <h3>Progresso de Estudos - Últimos 30 Dias</h3>
+                        <div class="chart-controls">
+                            <button class="chart-control-btn active">Horas</button>
+                            <button class="chart-control-btn">XP</button>
+                            <button class="chart-control-btn">Metas</button>
+                        </div>
+                    </div>
+                    <div class="chart-content">
+                        <div class="chart-visualization">
+                            <!-- Simulação de gráfico de linha -->
+                            <div class="line-chart">
+                                <div class="chart-y-axis">
+                                    <span class="y-label">40h</span>
+                                    <span class="y-label">30h</span>
+                                    <span class="y-label">20h</span>
+                                    <span class="y-label">10h</span>
+                                    <span class="y-label">0h</span>
+                                </div>
+                                <div class="chart-area">
+                                    <div class="chart-line"></div>
+                                    <div class="chart-points">
+                                        <div class="chart-point" style="left: 10%; bottom: 30%"></div>
+                                        <div class="chart-point" style="left: 20%; bottom: 45%"></div>
+                                        <div class="chart-point" style="left: 30%; bottom: 60%"></div>
+                                        <div class="chart-point" style="left: 40%; bottom: 55%"></div>
+                                        <div class="chart-point" style="left: 50%; bottom: 70%"></div>
+                                        <div class="chart-point" style="left: 60%; bottom: 80%"></div>
+                                        <div class="chart-point" style="left: 70%; bottom: 75%"></div>
+                                        <div class="chart-point" style="left: 80%; bottom: 85%"></div>
+                                        <div class="chart-point" style="left: 90%; bottom: 90%"></div>
+                                    </div>
+                                </div>
+                                <div class="chart-x-axis">
+                                    <span class="x-label">1</span>
+                                    <span class="x-label">8</span>
+                                    <span class="x-label">15</span>
+                                    <span class="x-label">22</span>
+                                    <span class="x-label">30</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3>Distribuição por Matéria</h3>
+                    </div>
+                    <div class="donut-chart">
+                        <div class="donut-center">
+                            <span class="donut-value">12</span>
+                            <span class="donut-label">Matérias</span>
+                        </div>
+                    </div>
+                    <div class="donut-legend">
+                        <div class="legend-item">
+                            <span class="legend-color" style="background: #3b82f6"></span>
+                            <span class="legend-text">Programação (35%)</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color" style="background: #10b981"></span>
+                            <span class="legend-text">Matemática (25%)</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color" style="background: #f59e0b"></span>
+                            <span class="legend-text">Física (20%)</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color" style="background: #ef4444"></span>
+                            <span class="legend-text">Outras (20%)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Goals and Achievements Section -->
+            <div class="goals-achievements-section">
+                <div class="goals-container">
+                    <div class="section-header">
+                        <h3>Metas da Semana</h3>
+                        <button class="add-goal-btn">+ Nova Meta</button>
+                    </div>
+                    <div class="goals-list">
+                        <div class="goal-item completed">
+                            <div class="goal-status">✅</div>
+                            <div class="goal-content">
+                                <h4>Completar curso de React</h4>
+                                <div class="goal-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 100%"></div>
+                                    </div>
+                                    <span class="progress-text">100%</span>
+                                </div>
+                            </div>
+                            <div class="goal-xp">+200 XP</div>
+                        </div>
+
+                        <div class="goal-item in-progress">
+                            <div class="goal-status">⏳</div>
+                            <div class="goal-content">
+                                <h4>Estudar 40 horas esta semana</h4>
+                                <div class="goal-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 75%"></div>
+                                    </div>
+                                    <span class="progress-text">30/40h</span>
+                                </div>
+                            </div>
+                            <div class="goal-xp">+150 XP</div>
+                        </div>
+
+                        <div class="goal-item">
+                            <div class="goal-status">⭕</div>
+                            <div class="goal-content">
+                                <h4>Fazer 5 posts educacionais</h4>
+                                <div class="goal-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 40%"></div>
+                                    </div>
+                                    <span class="progress-text">2/5 posts</span>
+                                </div>
+                            </div>
+                            <div class="goal-xp">+100 XP</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="achievements-container">
+                    <div class="section-header">
+                        <h3>Conquistas Recentes</h3>
+                        <a href="#" class="view-all-link">Ver todas</a>
+                    </div>
+                    <div class="achievements-grid">
+                        <div class="achievement-item unlocked">
+                            <div class="achievement-icon">🎓</div>
+                            <h4>Primeiro Curso</h4>
+                            <p>Completou seu primeiro curso</p>
+                            <span class="achievement-date">Há 2 dias</span>
+                        </div>
+
+                        <div class="achievement-item unlocked">
+                            <div class="achievement-icon">🔥</div>
+                            <h4>Streak de 7 dias</h4>
+                            <p>Estudou por 7 dias consecutivos</p>
+                            <span class="achievement-date">Há 5 dias</span>
+                        </div>
+
+                        <div class="achievement-item locked">
+                            <div class="achievement-icon">🏆</div>
+                            <h4>Scholar</h4>
+                            <p>Complete 10 cursos</p>
+                            <span class="achievement-progress">3/10</span>
+                        </div>
+
+                        <div class="achievement-item locked">
+                            <div class="achievement-icon">💎</div>
+                            <h4>Mentor</h4>
+                            <p>Ajude 50 pessoas</p>
+                            <span class="achievement-progress">12/50</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activity Feed -->
+            <div class="activity-section">
+                <div class="section-header">
+                    <h3>Atividade Recente</h3>
+                    <div class="activity-filters">
+                        <button class="filter-btn active">Todas</button>
+                        <button class="filter-btn">Estudos</button>
+                        <button class="filter-btn">Posts</button>
+                        <button class="filter-btn">Conquistas</button>
+                    </div>
+                </div>
+                <div class="activity-feed">
+                    <div class="activity-item">
+                        <div class="activity-icon study">📚</div>
+                        <div class="activity-content">
+                            <p><strong>Você</strong> completou uma sessão de estudo de 2h em <strong>React Hooks</strong></p>
+                            <span class="activity-time">Há 30 minutos</span>
+                        </div>
+                        <div class="activity-xp">+50 XP</div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon post">📝</div>
+                        <div class="activity-content">
+                            <p><strong>Você</strong> publicou "Dicas de CSS Grid Layout"</p>
+                            <span class="activity-time">Há 2 horas</span>
+                        </div>
+                        <div class="activity-xp">+25 XP</div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon achievement">🏆</div>
+                        <div class="activity-content">
+                            <p><strong>Você</strong> desbloqueou a conquista <strong>"Streak de 7 dias"</strong></p>
+                            <span class="activity-time">Há 1 dia</span>
+                        </div>
+                        <div class="activity-xp">+100 XP</div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon interaction">💬</div>
+                        <div class="activity-content">
+                            <p><strong>Maria Silva</strong> comentou em seu post sobre Álgebra Linear</p>
+                            <span class="activity-time">Há 1 dia</span>
+                        </div>
+                        <div class="activity-xp">+10 XP</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Sidebar - Additional Widgets -->
+        <aside class="right-sidebar">
+            <!-- Level Progress Widget -->
+            <div class="level-widget">
+                <h4>Progresso de Nível</h4>
+                <div class="level-info">
+                    <div class="current-level">
+                        <span class="level-number">15</span>
+                        <span class="level-label">Nível Atual</span>
+                    </div>
+                    <div class="level-progress">
+                        <div class="xp-bar">
+                            <div class="xp-fill" style="width: 68%"></div>
+                        </div>
+                        <div class="xp-text">
+                            <span>2,847 / 4,200 XP</span>
+                            <span>1,353 XP para o próximo nível</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Insights Widget -->
+            <div class="ai-insights-widget">
+                <h4>💡 Insights da IA</h4>
+                <div class="insights-list">
+                    <div class="insight-item">
+                        <div class="insight-icon">📈</div>
+                        <div class="insight-content">
+                            <p>Seu desempenho em matemática melhorou 23% esta semana!</p>
+                        </div>
+                    </div>
+                    <div class="insight-item">
+                        <div class="insight-icon">⏰</div>
+                        <div class="insight-content">
+                            <p>Você estuda melhor entre 14h-16h. Considere agendar sessões neste horário.</p>
+                        </div>
+                    </div>
+                    <div class="insight-item">
+                        <div class="insight-icon">🎯</div>
+                        <div class="insight-content">
+                            <p>Faltam apenas 2 metas para atingir seu objetivo mensal!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leaderboard Widget -->
+            <div class="leaderboard-widget">
+                <h4>🏆 Ranking Semanal</h4>
+                <div class="leaderboard-list">
+                    <div class="leaderboard-item rank-1">
+                        <div class="rank-position">1</div>
+                        <div class="user-info">
+                            <span class="username">Maria Silva</span>
+                            <span class="user-xp">3,450 XP</span>
+                        </div>
+                    </div>
+                    <div class="leaderboard-item rank-2">
+                        <div class="rank-position">2</div>
+                        <div class="user-info">
+                            <span class="username">João Santos</span>
+                            <span class="user-xp">3,120 XP</span>
+                        </div>
+                    </div>
+                    <div class="leaderboard-item rank-3 current-user">
+                        <div class="rank-position">3</div>
+                        <div class="user-info">
+                            <span class="username">Você</span>
+                            <span class="user-xp">2,847 XP</span>
+                        </div>
+                    </div>
+                    <div class="leaderboard-item">
+                        <div class="rank-position">4</div>
+                        <div class="user-info">
+                            <span class="username">Ana Costa</span>
+                            <span class="user-xp">2,650 XP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Study Schedule Widget -->
+            <div class="schedule-widget">
+                <h4>📅 Próximas Sessões</h4>
+                <div class="schedule-list">
+                    <div class="schedule-item">
+                        <div class="schedule-time">14:00</div>
+                        <div class="schedule-content">
+                            <h5>Matemática Avançada</h5>
+                            <p>Cálculo Diferencial</p>
+                        </div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-time">16:30</div>
+                        <div class="schedule-content">
+                            <h5>Programação</h5>
+                            <p>React Components</p>
+                        </div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-time">19:00</div>
+                        <div class="schedule-content">
+                            <h5>Grupo de Estudo</h5>
+                            <p>Machine Learning</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
