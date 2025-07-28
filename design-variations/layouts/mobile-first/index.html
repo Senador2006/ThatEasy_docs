@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThatEasy - Mobile First</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Compacto -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">🎓 ThatEasy</div>
+            <div class="header-actions">
+                <button class="search-btn">🔍</button>
+                <button class="notification-btn">🔔</button>
+                <div class="avatar">U</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Overlay (Hidden by default) -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-content">
+            <input type="text" class="search-input" placeholder="Buscar...">
+            <button class="search-close" onclick="closeSearch()">✕</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Story-like Progress Indicators -->
+        <div class="progress-stories">
+            <div class="story-item active">
+                <div class="story-avatar">📚</div>
+                <span>Estudos</span>
+            </div>
+            <div class="story-item">
+                <div class="story-avatar">🎯</div>
+                <span>Metas</span>
+            </div>
+            <div class="story-item">
+                <div class="story-avatar">👥</div>
+                <span>Grupos</span>
+            </div>
+            <div class="story-item">
+                <div class="story-avatar">🏆</div>
+                <span>Conquistas</span>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="quick-actions">
+            <button class="quick-action-btn primary">
+                <span class="icon">✏️</span>
+                <span>Nova Pergunta</span>
+            </button>
+            <button class="quick-action-btn">
+                <span class="icon">📷</span>
+                <span>Foto</span>
+            </button>
+            <button class="quick-action-btn">
+                <span class="icon">📹</span>
+                <span>Vídeo</span>
+            </button>
+        </div>
+
+        <!-- AI Assistant Card -->
+        <div class="ai-card">
+            <div class="ai-header">
+                <span class="ai-icon">🤖</span>
+                <span>Assistente IA está online</span>
+                <span class="ai-status">●</span>
+            </div>
+            <p>Precisa de ajuda com algum tópico?</p>
+            <button class="ai-chat-btn">Iniciar conversa</button>
+        </div>
+
+        <!-- Feed Posts -->
+        <div class="posts-feed">
+            <!-- Post 1 -->
+            <article class="post-card">
+                <div class="post-header">
+                    <div class="user-info">
+                        <div class="user-avatar">M</div>
+                        <div class="user-details">
+                            <h4>Maria Silva</h4>
+                            <span class="user-badge">Prof. Matemática</span>
+                        </div>
+                    </div>
+                    <div class="post-time">2h</div>
+                </div>
+                
+                <div class="post-content">
+                    <h3>Guia Completo: Álgebra Linear</h3>
+                    <p>Material completo sobre fundamentos da álgebra linear. Inclui conceitos básicos e exercícios práticos! 📐✨</p>
+                    
+                    <div class="post-tags">
+                        <span class="tag">#matematica</span>
+                        <span class="tag">#algebra</span>
+                    </div>
+                </div>
+
+                <div class="post-engagement">
+                    <div class="engagement-stats">
+                        <span>❤️ 124</span>
+                        <span>💬 23</span>
+                        <span>📤 12</span>
+                    </div>
+                </div>
+
+                <div class="post-actions">
+                    <button class="action-btn like">
+                        <span>❤️</span>
+                    </button>
+                    <button class="action-btn comment">
+                        <span>💬</span>
+                    </button>
+                    <button class="action-btn share">
+                        <span>📤</span>
+                    </button>
+                    <button class="action-btn save">
+                        <span>🔖</span>
+                    </button>
+                </div>
+            </article>
+
+            <!-- Post 2 -->
+            <article class="post-card">
+                <div class="post-header">
+                    <div class="user-info">
+                        <div class="user-avatar">J</div>
+                        <div class="user-details">
+                            <h4>João Santos</h4>
+                            <span class="user-badge">Estudante CS</span>
+                        </div>
+                    </div>
+                    <div class="post-time">4h</div>
+                </div>
+                
+                <div class="post-content">
+                    <h3>🚀 Primeiro projeto em React!</h3>
+                    <p>Depois de 3 semanas estudando, criei minha primeira aplicação web. Uma calculadora simples mas funcionando! 🙏</p>
+                    
+                    <div class="post-tags">
+                        <span class="tag">#react</span>
+                        <span class="tag">#javascript</span>
+                    </div>
+                </div>
+
+                <div class="post-engagement">
+                    <div class="engagement-stats">
+                        <span>❤️ 89</span>
+                        <span>💬 15</span>
+                        <span>📤 7</span>
+                    </div>
+                </div>
+
+                <div class="post-actions">
+                    <button class="action-btn like">
+                        <span>❤️</span>
+                    </button>
+                    <button class="action-btn comment">
+                        <span>💬</span>
+                    </button>
+                    <button class="action-btn share">
+                        <span>📤</span>
+                    </button>
+                    <button class="action-btn save">
+                        <span>🔖</span>
+                    </button>
+                </div>
+            </article>
+
+            <!-- Post 3 -->
+            <article class="post-card">
+                <div class="post-header">
+                    <div class="user-info">
+                        <div class="user-avatar">A</div>
+                        <div class="user-details">
+                            <h4>Ana Costa</h4>
+                            <span class="user-badge">Pesquisadora IA</span>
+                        </div>
+                    </div>
+                    <div class="post-time">6h</div>
+                </div>
+                
+                <div class="post-content">
+                    <h3>📊 Paper: "Attention Is All You Need"</h3>
+                    <p>Paper fundamental sobre Transformers. Revolucionou o processamento de linguagem natural. Vamos discutir! 🤓</p>
+                    
+                    <div class="post-tags">
+                        <span class="tag">#ia</span>
+                        <span class="tag">#nlp</span>
+                    </div>
+                </div>
+
+                <div class="post-engagement">
+                    <div class="engagement-stats">
+                        <span>❤️ 156</span>
+                        <span>💬 34</span>
+                        <span>📤 28</span>
+                    </div>
+                </div>
+
+                <div class="post-actions">
+                    <button class="action-btn like liked">
+                        <span>❤️</span>
+                    </button>
+                    <button class="action-btn comment">
+                        <span>💬</span>
+                    </button>
+                    <button class="action-btn share">
+                        <span>📤</span>
+                    </button>
+                    <button class="action-btn save">
+                        <span>🔖</span>
+                    </button>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <button class="nav-btn active">
+            <span class="nav-icon">🏠</span>
+            <span class="nav-label">Início</span>
+        </button>
+        <button class="nav-btn">
+            <span class="nav-icon">🔍</span>
+            <span class="nav-label">Explorar</span>
+        </button>
+        <button class="nav-btn">
+            <span class="nav-icon">🤖</span>
+            <span class="nav-label">IA</span>
+        </button>
+        <button class="nav-btn">
+            <span class="nav-icon">📚</span>
+            <span class="nav-label">Estudos</span>
+        </button>
+        <button class="nav-btn">
+            <span class="nav-icon">👤</span>
+            <span class="nav-label">Perfil</span>
+        </button>
+    </nav>
+
+    <!-- Floating Action Button -->
+    <button class="fab" onclick="openCreatePost()">
+        <span>+</span>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html> 

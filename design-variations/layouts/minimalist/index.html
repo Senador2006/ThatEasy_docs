@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThatEasy - Minimalista</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Minimal -->
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo">ThatEasy</h1>
+            
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Buscar...">
+            </div>
+            
+            <nav class="header-nav">
+                <a href="#" class="nav-link active">Feed</a>
+                <a href="#" class="nav-link">Explorar</a>
+                <a href="#" class="nav-link">Perfil</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Sidebar Minimal -->
+        <aside class="sidebar">
+            <nav class="main-nav">
+                <a href="#" class="nav-item active">
+                    <span>Início</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span>IA Assistant</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span>Meus Estudos</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span>Grupos</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span>Favoritos</span>
+                </a>
+            </nav>
+
+            <!-- Progress Minimal -->
+            <div class="progress-widget">
+                <h3>Progresso</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <p class="progress-text">7 de 10 metas concluídas</p>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Create Post Minimal -->
+            <div class="create-post">
+                <textarea class="post-input" placeholder="Compartilhe algo interessante..."></textarea>
+                <div class="post-actions">
+                    <select class="post-type">
+                        <option>Artigo</option>
+                        <option>Pergunta</option>
+                        <option>Link</option>
+                        <option>Vídeo</option>
+                    </select>
+                    <button class="publish-btn">Publicar</button>
+                </div>
+            </div>
+
+            <!-- Posts -->
+            <div class="posts">
+                <!-- Post 1 -->
+                <article class="post">
+                    <div class="post-meta">
+                        <span class="author">Maria Silva</span>
+                        <span class="separator">•</span>
+                        <span class="time">2h</span>
+                        <span class="separator">•</span>
+                        <span class="category">Matemática</span>
+                    </div>
+                    
+                    <h2 class="post-title">Guia Completo: Álgebra Linear para Iniciantes</h2>
+                    
+                    <div class="post-content">
+                        <p>Preparei um material completo sobre os fundamentos da álgebra linear. Inclui conceitos básicos, exercícios práticos e aplicações no mundo real. Perfeito para quem está começando!</p>
+                    </div>
+                    
+                    <div class="post-tags">
+                        <span class="tag">matematica</span>
+                        <span class="tag">algebra-linear</span>
+                        <span class="tag">tutorial</span>
+                    </div>
+                    
+                    <div class="post-stats">
+                        <span class="stat">124 curtidas</span>
+                        <span class="separator">•</span>
+                        <span class="stat">23 comentários</span>
+                        <span class="separator">•</span>
+                        <span class="stat">12 compartilhamentos</span>
+                    </div>
+                    
+                    <div class="post-actions-minimal">
+                        <button class="action-btn">Curtir</button>
+                        <button class="action-btn">Comentar</button>
+                        <button class="action-btn">Salvar</button>
+                    </div>
+                </article>
+
+                <!-- Post 2 -->
+                <article class="post">
+                    <div class="post-meta">
+                        <span class="author">João Santos</span>
+                        <span class="separator">•</span>
+                        <span class="time">4h</span>
+                        <span class="separator">•</span>
+                        <span class="category">Programação</span>
+                    </div>
+                    
+                    <h2 class="post-title">Acabei de terminar meu primeiro projeto em React!</h2>
+                    
+                    <div class="post-content">
+                        <p>Depois de 3 semanas estudando, finalmente criei minha primeira aplicação web. Uma calculadora simples, mas funcionando perfeitamente! Obrigado a todos que me ajudaram.</p>
+                    </div>
+                    
+                    <div class="post-tags">
+                        <span class="tag">react</span>
+                        <span class="tag">javascript</span>
+                        <span class="tag">projeto</span>
+                    </div>
+                    
+                    <div class="post-stats">
+                        <span class="stat">89 curtidas</span>
+                        <span class="separator">•</span>
+                        <span class="stat">15 comentários</span>
+                        <span class="separator">•</span>
+                        <span class="stat">7 compartilhamentos</span>
+                    </div>
+                    
+                    <div class="post-actions-minimal">
+                        <button class="action-btn">Curtir</button>
+                        <button class="action-btn">Comentar</button>
+                        <button class="action-btn">Salvar</button>
+                    </div>
+                </article>
+
+                <!-- Post 3 -->
+                <article class="post">
+                    <div class="post-meta">
+                        <span class="author">Ana Costa</span>
+                        <span class="separator">•</span>
+                        <span class="time">6h</span>
+                        <span class="separator">•</span>
+                        <span class="category">IA & ML</span>
+                    </div>
+                    
+                    <h2 class="post-title">Paper Interessante: "Attention Is All You Need"</h2>
+                    
+                    <div class="post-content">
+                        <p>Acabei de ler este paper fundamental sobre Transformers. Revolucionou como pensamos sobre processamento de linguagem natural. Alguém mais está estudando esta arquitetura?</p>
+                        
+                        <div class="link-preview">
+                            <div class="link-info">
+                                <h4>Attention Is All You Need</h4>
+                                <p>Vaswani et al. • arXiv:1706.03762</p>
+                                <span class="link-url">arxiv.org</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="post-tags">
+                        <span class="tag">ia</span>
+                        <span class="tag">nlp</span>
+                        <span class="tag">transformers</span>
+                    </div>
+                    
+                    <div class="post-stats">
+                        <span class="stat">156 curtidas</span>
+                        <span class="separator">•</span>
+                        <span class="stat">34 comentários</span>
+                        <span class="separator">•</span>
+                        <span class="stat">28 compartilhamentos</span>
+                    </div>
+                    
+                    <div class="post-actions-minimal">
+                        <button class="action-btn liked">Curtido</button>
+                        <button class="action-btn">Comentar</button>
+                        <button class="action-btn saved">Salvo</button>
+                    </div>
+                </article>
+
+                <!-- AI Assistant Suggestion -->
+                <div class="ai-suggestion">
+                    <div class="ai-content">
+                        <h3>💡 Sugestão da IA</h3>
+                        <p>Baseado nos posts que você curtiu, você pode se interessar por conteúdo sobre "Deep Learning Fundamentals".</p>
+                        <button class="ai-btn">Explorar sugestões</button>
+                    </div>
+                </div>
+
+                <!-- Post 4 -->
+                <article class="post">
+                    <div class="post-meta">
+                        <span class="author">Prof. Carlos Lima</span>
+                        <span class="separator">•</span>
+                        <span class="time">8h</span>
+                        <span class="separator">•</span>
+                        <span class="category">Física</span>
+                    </div>
+                    
+                    <h2 class="post-title">Conceitos Fundamentais da Mecânica Quântica</h2>
+                    
+                    <div class="post-content">
+                        <p>Uma introdução didática aos principais conceitos da mecânica quântica, explicados de forma simples e acessível para estudantes iniciantes.</p>
+                        
+                        <blockquote class="quote">
+                            "Se você pensa que entende mecânica quântica, então você não entende mecânica quântica." - Richard Feynman
+                        </blockquote>
+                    </div>
+                    
+                    <div class="post-tags">
+                        <span class="tag">fisica</span>
+                        <span class="tag">quantica</span>
+                        <span class="tag">introducao</span>
+                    </div>
+                    
+                    <div class="post-stats">
+                        <span class="stat">203 curtidas</span>
+                        <span class="separator">•</span>
+                        <span class="stat">67 comentários</span>
+                        <span class="separator">•</span>
+                        <span class="stat">45 compartilhamentos</span>
+                    </div>
+                    
+                    <div class="post-actions-minimal">
+                        <button class="action-btn">Curtir</button>
+                        <button class="action-btn">Comentar</button>
+                        <button class="action-btn">Salvar</button>
+                    </div>
+                </article>
+
+                <!-- Study Group Suggestion -->
+                <div class="study-group-suggestion">
+                    <div class="group-content">
+                        <h3>📚 Grupo de Estudo</h3>
+                        <p><strong>Machine Learning Fundamentals</strong></p>
+                        <p>Um grupo focado em aprender os fundamentos de ML. Atualmente 47 membros ativos.</p>
+                        <div class="group-actions">
+                            <button class="group-btn primary">Participar</button>
+                            <button class="group-btn">Ver detalhes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Post 5 -->
+                <article class="post">
+                    <div class="post-meta">
+                        <span class="author">Laura Mendes</span>
+                        <span class="separator">•</span>
+                        <span class="time">12h</span>
+                        <span class="separator">•</span>
+                        <span class="category">Web Dev</span>
+                    </div>
+                    
+                    <h2 class="post-title">Dicas Essenciais para CSS Grid Layout</h2>
+                    
+                    <div class="post-content">
+                        <p>Um guia prático sobre CSS Grid com exemplos reais e dicas que vão facilitar seu desenvolvimento front-end.</p>
+                        
+                        <div class="code-snippet">
+                            <code>
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+                            </code>
+                        </div>
+                    </div>
+                    
+                    <div class="post-tags">
+                        <span class="tag">css</span>
+                        <span class="tag">grid</span>
+                        <span class="tag">frontend</span>
+                    </div>
+                    
+                    <div class="post-stats">
+                        <span class="stat">178 curtidas</span>
+                        <span class="separator">•</span>
+                        <span class="stat">42 comentários</span>
+                        <span class="separator">•</span>
+                        <span class="stat">31 compartilhamentos</span>
+                    </div>
+                    
+                    <div class="post-actions-minimal">
+                        <button class="action-btn">Curtir</button>
+                        <button class="action-btn">Comentar</button>
+                        <button class="action-btn">Salvar</button>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Load More -->
+            <div class="load-more">
+                <button class="load-more-btn">Carregar mais posts</button>
+            </div>
+        </main>
+
+        <!-- Right Sidebar Minimal -->
+        <aside class="right-sidebar">
+            <!-- Trending Topics -->
+            <div class="widget">
+                <h3>Tópicos em Alta</h3>
+                <ul class="topic-list">
+                    <li class="topic-item">
+                        <span class="topic-name">Machine Learning</span>
+                        <span class="topic-count">2.1k</span>
+                    </li>
+                    <li class="topic-item">
+                        <span class="topic-name">Python vs JavaScript</span>
+                        <span class="topic-count">1.8k</span>
+                    </li>
+                    <li class="topic-item">
+                        <span class="topic-name">ENEM 2024</span>
+                        <span class="topic-count">3.4k</span>
+                    </li>
+                    <li class="topic-item">
+                        <span class="topic-name">Carreira Tech</span>
+                        <span class="topic-count">987</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Suggested People -->
+            <div class="widget">
+                <h3>Pessoas para Seguir</h3>
+                <ul class="people-list">
+                    <li class="person-item">
+                        <div class="person-info">
+                            <span class="person-name">Prof. Carlos Lima</span>
+                            <span class="person-title">Física</span>
+                        </div>
+                        <button class="follow-btn">Seguir</button>
+                    </li>
+                    <li class="person-item">
+                        <div class="person-info">
+                            <span class="person-name">Laura Mendes</span>
+                            <span class="person-title">Dev Full Stack</span>
+                        </div>
+                        <button class="follow-btn">Seguir</button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="widget">
+                <h3>Suas Estatísticas</h3>
+                <div class="stats-list">
+                    <div class="stat-item">
+                        <span class="stat-number">47h</span>
+                        <span class="stat-label">Esta semana</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">234</span>
+                        <span class="stat-label">Seguidores</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">12</span>
+                        <span class="stat-label">Cursos ativos</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
