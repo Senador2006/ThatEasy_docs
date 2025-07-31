@@ -96,6 +96,13 @@ ThatEasy é uma rede social inovadora que conecta estudantes, pesquisadores, edu
 - **Marketplace**: Comissão em vendas de cursos/livros
 - **Publicidade Educacional**: Anúncios de cursos e livros relevantes
 
+## 📊 Documentação Técnica
+
+- **[Diagramas de Sistema](./docs/system-diagrams/)**: Arquitetura completa e fluxos do sistema
+- **[Especificação da API](./docs/api-specification.md)**: Endpoints e estrutura da API REST
+- **[Esquema do Banco](./docs/database-schema.md)**: Estrutura das tabelas e relacionamentos
+- **[Stack Tecnológico](./project-structure/technology-stack-summary.md)**: Tecnologias utilizadas
+
 ## 🎯 Próximos Passos
 
 1. **Validação de Mercado**: Pesquisa com público-alvo
